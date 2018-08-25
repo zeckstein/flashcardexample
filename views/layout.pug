@@ -1,0 +1,16 @@
+doctype html
+html(lang=en)
+    head
+        title Flash Cards
+        link(rel='stylesheet', href='stylesheets/style.css')
+    body
+        include includes/header.pug
+        if name
+            section.namecard
+                .namecard-hello
+                    p.namecard-greeting Welcome, #{name}!
+                    form.namecard-exit(action='/goodbye' method='post')
+                        button(type='submit')
+                            img(src='img/close.svg')
+                    
+        block main

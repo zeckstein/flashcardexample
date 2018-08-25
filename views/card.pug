@@ -1,0 +1,16 @@
+extends layout.pug
+
+block main
+    section.flashcards
+        .card.card-question
+            .card-header
+            h1.card-title Question
+            .content
+                h2= text
+                .card-flip-wrap
+                    a(href=`${id}?side=${sideToShow}`)= sideToShowDisplay
+                        img.card-flip(src='/static/img/flip.svg')
+                .card-next
+                    a(href='/flashcards')
+                        img(src='/static/img/next.svg')
+
